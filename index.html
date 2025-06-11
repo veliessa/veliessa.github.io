@@ -1,74 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/Brand">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VELIESSA — Crafted for the Rare</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>VELIESSA | World's Most Luxurious Fashion Brand | A Movement of Taste</title>
+  <meta name="description" content="VELIESSA - The epitome of luxury fashion. Discover the world's most exclusive and luxurious fashion brand founded by Aman Kumar. Experience unparalleled craftsmanship and timeless elegance.">
+  <meta name="keywords" content="VELIESSA, luxury fashion, high-end fashion, designer clothing, premium fashion brand, Aman Kumar, theamanone, world's most luxurious brand, exclusive fashion, haute couture, luxury clothing, premium apparel">
+  <meta name="author" content="VELIESSA">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://veliessa.github.io/">
+  <meta property="og:title" content="VELIESSA  | World's Most Luxurious Fashion Brand">
+  <meta property="og:description" content="Discover the world's most exclusive and luxurious fashion brand. A movement of taste beyond style.">
+  <meta property="og:image" content="https://veliessa.github.io/cover.jpg">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@theamanone">
+  <meta name="twitter:creator" content="@theamanone">
+  <meta name="twitter:title" content="VELIESSA  | World's Most Luxurious Fashion Brand">
+  <meta name="twitter:description" content="Discover the world's most exclusive and luxurious fashion brand. A movement of taste beyond style.">
+  <meta name="twitter:image" content="https://veliessa.github.io/cover.jpg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://veliessa.github.io/" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.ico">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Brand",
+    "name": "VELIESSA",
+    "description": "World's most luxurious and exclusive fashion brand, redefining elegance and sophistication in high-end fashion.",
+    "url": "https://veliessa.github.io",
+    "logo": "https://veliessa.github.io/cover.jpg",
+    "sameAs": [
+      "https://thefineera.com"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Aman Kumar",
+      "url": "https://github.com/theamanone"
+    },
+    "foundingDate": "2025",
+    "slogan": "A Movement of Taste"
+  }
+  </script>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
     body {
       margin: 0;
-      background-color: #0a0a0a;
       color: #fff;
       font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
       text-align: center;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('cover.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: brightness(0.7);
+      z-index: -1;
+    }
+
+    .content {
+      max-width: 800px;
+      width: 100%;
       padding: 2rem;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: 1px;
-    }
-
-    p {
-      max-width: 500px;
-      margin: 0.5rem auto;
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-
-    .tagline {
-      font-style: italic;
-      font-size: 1.2rem;
-      color: #d4af37;
-      margin-bottom: 2rem;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 1rem;
-      font-size: 0.85rem;
-      color: #555;
+      position: relative;
+      z-index: 1;
+      margin: 0 auto;
     }
 
     .logo {
-      width: 120px;
-      margin-bottom: 1rem;
-      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.05));
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 10vw, 5rem);
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      font-size: clamp(0.8rem, 3vw, 1.2rem);
+      font-weight: 300;
+      letter-spacing: 4px;
+      margin: 1rem 0;
+      text-transform: uppercase;
+    }
+
+    .description {
+      font-size: clamp(0.9rem, 4vw, 1.1rem);
+      font-weight: 300;
+      margin: 1.5rem auto 2.5rem;
+      line-height: 1.6;
+      max-width: 90%;
+    }
+
+    .explore-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      border: 1px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      font-size: clamp(0.8rem, 3vw, 0.9rem);
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      margin: 1rem 0 2rem;
+      white-space: nowrap;
+    }
+
+    .explore-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .explore-btn::after {
+      content: '→';
+      margin-left: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .explore-btn:hover::after {
+      transform: translateX(5px);
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      font-size: clamp(0.6rem, 2vw, 0.7rem);
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      padding: 0 20px;
+      z-index: 10;
+    }
+
+    .n-logo {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.7);
+      z-index: 10;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      
+      .content {
+        padding: 1rem;
+      }
+      
+      .logo {
+        margin-top: 1.5rem;
+      }
+      
+      .description {
+        max-width: 100%;
+        margin-bottom: 2rem;
+      }
+      
+      .explore-btn {
+        padding: 10px 20px;
+        margin: 0.5rem 0 1.5rem;
+      }
+      
+      .footer {
+        position: relative;
+        bottom: auto;
+        margin-top: 2rem;
+        padding-bottom: 1rem;
+      }
+      
+      .n-logo {
+        position: relative;
+        display: inline-block;
+        margin: 1rem 0 0;
+        left: 0;
+        bottom: 0;
+      }
     }
   </style>
 </head>
-<body>
-  <img src="banner.png" alt="VELIESSA Logo" class="logo" />
-  <h1>VELIESSA</h1>
-  <div class="tagline">Crafted for the Rare</div>
-  <p>
-    VELIESSA is not a fashion brand.<br>
-    It is a mindset, a movement, a memory in the making.
-  </p>
-  <p>
-    In a world full of noise, we are the silence that speaks.
-  </p>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="background-image"></div>
+  
+  <main class="content" role="main" itemprop="mainContentOfPage">
+    <h1 class="logo" itemprop="name">VELIESSA<sup>®</sup></h1>
+    <div class="subtitle" itemprop="slogan">A MOVEMENT OF TASTE</div>
+    <p class="description" itemprop="description">Discover our vision beyond style. VELIESSA is the world's most luxurious fashion brand, redefining elegance and sophistication in high-end fashion.</p>
+    <a href="https://thefineera.com" class="explore-btn" itemprop="url">EXPLORE MAIN SITE</a>
+    <meta itemprop="image" content="https://veliessa.github.io/banner.png" />
+    <meta itemprop="founder" content="Aman Kumar" />
+    <meta itemprop="foundingDate" content="2025" />
+  </main>
 
-  <footer>
-    &copy; 2025 VELIESSA. All rights reserved.
+  <div class="n-logo" aria-hidden="true">N</div>
+  
+  <footer class="footer" role="contentinfo">
+    VELIESSA.GITHUB.IO is an experimental sub-site of VELIESSA - www.veliessa.com
   </footer>
 </body>
 </html>
